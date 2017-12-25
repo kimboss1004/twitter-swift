@@ -12,6 +12,18 @@
 		84505AF71FE9F8B5006643F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84505AF51FE9F8B5006643F4 /* Main.storyboard */; };
 		84505AF91FE9F8B5006643F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84505AF81FE9F8B5006643F4 /* Assets.xcassets */; };
 		84505AFC1FE9F8B5006643F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84505AFA1FE9F8B5006643F4 /* LaunchScreen.storyboard */; };
+		84505B051FE9F8D6006643F4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84505B041FE9F8D6006643F4 /* AudioToolbox.framework */; };
+		84505B071FE9F8FF006643F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84505B061FE9F8FF006643F4 /* SystemConfiguration.framework */; };
+		84505B091FE9F923006643F4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84505B081FE9F923006643F4 /* libsqlite3.tbd */; };
+		84505B0B1FE9F93D006643F4 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84505B0A1FE9F93C006643F4 /* libstdc++.6.tbd */; };
+		84505B0E1FE9F979006643F4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84505B0C1FE9F979006643F4 /* Parse.framework */; };
+		84505B0F1FE9F979006643F4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84505B0D1FE9F979006643F4 /* Bolts.framework */; };
+		84505B111FEAEB9B006643F4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84505B101FEAEB9B006643F4 /* Login.storyboard */; };
+		84505B131FEB0260006643F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B121FEB0260006643F4 /* RegisterViewController.swift */; };
+		84505B151FEB042D006643F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B141FEB042D006643F4 /* LoginViewController.swift */; };
+		84505B171FEDA307006643F4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B161FEDA307006643F4 /* Helper.swift */; };
+		84505B191FEDFF4C006643F4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B181FEDFF4C006643F4 /* PostViewController.swift */; };
+		84505B1D1FEED546006643F4 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B1C1FEED546006643F4 /* MessagesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,18 @@
 		84505AF81FE9F8B5006643F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84505AFB1FE9F8B5006643F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84505AFD1FE9F8B5006643F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84505B041FE9F8D6006643F4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		84505B061FE9F8FF006643F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		84505B081FE9F923006643F4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		84505B0A1FE9F93C006643F4 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		84505B0C1FE9F979006643F4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		84505B0D1FE9F979006643F4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		84505B101FEAEB9B006643F4 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		84505B121FEB0260006643F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		84505B141FEB042D006643F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84505B161FEDA307006643F4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		84505B181FEDFF4C006643F4 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		84505B1C1FEED546006643F4 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +53,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84505B0B1FE9F93D006643F4 /* libstdc++.6.tbd in Frameworks */,
+				84505B091FE9F923006643F4 /* libsqlite3.tbd in Frameworks */,
+				84505B071FE9F8FF006643F4 /* SystemConfiguration.framework in Frameworks */,
+				84505B0F1FE9F979006643F4 /* Bolts.framework in Frameworks */,
+				84505B051FE9F8D6006643F4 /* AudioToolbox.framework in Frameworks */,
+				84505B0E1FE9F979006643F4 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +70,7 @@
 			children = (
 				84505AF01FE9F8B5006643F4 /* Twitter */,
 				84505AEF1FE9F8B5006643F4 /* Products */,
+				84505B031FE9F8D6006643F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +86,48 @@
 			isa = PBXGroup;
 			children = (
 				84505AF11FE9F8B5006643F4 /* AppDelegate.swift */,
-				84505AF31FE9F8B5006643F4 /* ViewController.swift */,
-				84505AF51FE9F8B5006643F4 /* Main.storyboard */,
+				84505B161FEDA307006643F4 /* Helper.swift */,
+				84505B1B1FEDFF96006643F4 /* Home */,
+				84505B1A1FEDFF8C006643F4 /* Login */,
+				84505B0D1FE9F979006643F4 /* Bolts.framework */,
+				84505B0C1FE9F979006643F4 /* Parse.framework */,
 				84505AF81FE9F8B5006643F4 /* Assets.xcassets */,
 				84505AFA1FE9F8B5006643F4 /* LaunchScreen.storyboard */,
 				84505AFD1FE9F8B5006643F4 /* Info.plist */,
 			);
 			path = Twitter;
+			sourceTree = "<group>";
+		};
+		84505B031FE9F8D6006643F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84505B0A1FE9F93C006643F4 /* libstdc++.6.tbd */,
+				84505B081FE9F923006643F4 /* libsqlite3.tbd */,
+				84505B061FE9F8FF006643F4 /* SystemConfiguration.framework */,
+				84505B041FE9F8D6006643F4 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84505B1A1FEDFF8C006643F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84505B121FEB0260006643F4 /* RegisterViewController.swift */,
+				84505B141FEB042D006643F4 /* LoginViewController.swift */,
+				84505B101FEAEB9B006643F4 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84505B1B1FEDFF96006643F4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84505AF31FE9F8B5006643F4 /* ViewController.swift */,
+				84505B181FEDFF4C006643F4 /* PostViewController.swift */,
+				84505B1C1FEED546006643F4 /* MessagesTableViewCell.swift */,
+				84505AF51FE9F8B5006643F4 /* Main.storyboard */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84505B111FEAEB9B006643F4 /* Login.storyboard in Resources */,
 				84505AFC1FE9F8B5006643F4 /* LaunchScreen.storyboard in Resources */,
 				84505AF91FE9F8B5006643F4 /* Assets.xcassets in Resources */,
 				84505AF71FE9F8B5006643F4 /* Main.storyboard in Resources */,
@@ -136,7 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84505B191FEDFF4C006643F4 /* PostViewController.swift in Sources */,
+				84505B151FEB042D006643F4 /* LoginViewController.swift in Sources */,
+				84505B131FEB0260006643F4 /* RegisterViewController.swift in Sources */,
+				84505B171FEDA307006643F4 /* Helper.swift in Sources */,
 				84505AF41FE9F8B5006643F4 /* ViewController.swift in Sources */,
+				84505B1D1FEED546006643F4 /* MessagesTableViewCell.swift in Sources */,
 				84505AF21FE9F8B5006643F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +347,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Twitter",
+				);
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kimboss.Twitter;
@@ -289,6 +366,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Twitter",
+				);
 				INFOPLIST_FILE = Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kimboss.Twitter;

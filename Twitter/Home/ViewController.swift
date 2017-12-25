@@ -14,26 +14,25 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var messages = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
 
-        let query = PFQuery(className: "People")
-        query.whereKey("age", equalTo: 19)
-        let query2 = PFQuery(className: "People")
-        query2.whereKey("firstname", equalTo: "Nick")
-        let findQuery = PFQuery.orQuery(withSubqueries: [query, query2])
-        findQuery.findObjectsInBackground { (objects, error) in
-            if(error == nil){
-                for object in objects!{
-                    print("\(object["firstname"]!) : \(object["lastname"]!) -- \(object["age"]!)")
-                }
-            }
-        }
+        getMessages()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func getMessages(){
+        let query = PFQuery(className: "Messages")
+        query.findObjectsInBackground { (objects, error) in
+            if let objects = objects {
+                self.messages = objects
+                self.tableView.reloadData()
+            }
+        }
+        
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -47,8 +46,23 @@ class ViewController: UIViewController {
         alert.addAction(cancelAction)
         present(alert, animated: true)
     }
-    
-
 
 }
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessagesTableViewCell
+        let messageObj = messages[indexPath.row]
+        cell.setMessageCell(message: messageObj)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+}
+
+
+
+
 
