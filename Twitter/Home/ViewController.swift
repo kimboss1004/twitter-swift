@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
+        title = PFUser.current()?.username
         getMessages()
     }
 
@@ -54,11 +54,44 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessagesTableViewCell
         let messageObj = messages[indexPath.row]
         cell.setMessageCell(message: messageObj)
+        
+        // like button
+        cell.likesButton.tag = indexPath.row
+        cell.likesButton.addTarget(self, action: #selector(likeClicked(sender: )), for: .touchUpInside)
+
+//        cell.commentsButton.tag = indexPath.row
+//        cell.commentsButton.addTarget(self, action: #selector(commentClicked(sender:)), for: .touchUpInside)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
+    }
+    
+   @objc func likeClicked(sender: UIButton){
+        let message = messages[sender.tag]
+        let currentUsername = PFUser.current()?.username!
+        let sender = message["sender"] as? String ?? ""
+        var likesArray = message["likes"] as? [String] ?? [String]()
+    
+        if(currentUsername == sender){
+            Helper.shared.showOKAlert(title: "Not Allowed", message: "You are not allowed to like your own message", viewController: self)
+            return
+        }
+        if likesArray.contains(currentUsername!){
+            Helper.shared.showOKAlert(title: "Not Allowed", message: "You have already liked this post", viewController: self)
+            return
+        }
+    
+        likesArray.append(currentUsername!)
+        message["likes"] = likesArray
+        message.saveInBackground { (success, error) in
+            self.tableView.reloadData()
+        }
+    }
+    
+    @objc func commentClicked(sender: UIButton){
+        print(sender.tag)
     }
 }
 
