@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var messages = [PFObject]()
+    var selectedObjectFromHome: PFObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,15 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         title = PFUser.current()?.username
         getMessages()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "comments"){
+            let destinationVC = segue.destination as! CommentsViewController
+            if let selectedObjectFromHomeTemp = selectedObjectFromHome {
+                destinationVC.selectedObject = selectedObjectFromHomeTemp
+            }
+        }
     }
 
     func getMessages(){
@@ -59,8 +69,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         cell.likesButton.tag = indexPath.row
         cell.likesButton.addTarget(self, action: #selector(likeClicked(sender: )), for: .touchUpInside)
 
-//        cell.commentsButton.tag = indexPath.row
-//        cell.commentsButton.addTarget(self, action: #selector(commentClicked(sender:)), for: .touchUpInside)
+        cell.commentsButton.tag = indexPath.row
+        cell.commentsButton.addTarget(self, action: #selector(commentClicked(sender:)), for: .touchUpInside)
         return cell
     }
     
@@ -72,7 +82,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         let message = messages[sender.tag]
         let currentUsername = PFUser.current()?.username!
         let sender = message["sender"] as? String ?? ""
-        var likesArray = message["likes"] as? [String] ?? [String]()
+        let likesArray = message["likes"] as? [String] ?? [String]()
     
         if(currentUsername == sender){
             Helper.shared.showOKAlert(title: "Not Allowed", message: "You are not allowed to like your own message", viewController: self)
@@ -83,8 +93,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
             return
         }
     
-        likesArray.append(currentUsername!)
-        message["likes"] = likesArray
+        message.addUniqueObject(currentUsername!, forKey: "likes")
+    
+
         message.saveInBackground { (success, error) in
             self.tableView.reloadData()
         }
@@ -92,6 +103,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     @objc func commentClicked(sender: UIButton){
         print(sender.tag)
+        selectedObjectFromHome = messages[sender.tag]
+        performSegue(withIdentifier: "comments", sender: self)
     }
 }
 

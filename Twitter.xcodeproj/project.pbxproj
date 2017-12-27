@@ -24,6 +24,7 @@
 		84505B171FEDA307006643F4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B161FEDA307006643F4 /* Helper.swift */; };
 		84505B191FEDFF4C006643F4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B181FEDFF4C006643F4 /* PostViewController.swift */; };
 		84505B1D1FEED546006643F4 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B1C1FEED546006643F4 /* MessagesTableViewCell.swift */; };
+		84505B431FF43EF8006643F4 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505B421FF43EF8006643F4 /* CommentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		84505B161FEDA307006643F4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		84505B181FEDFF4C006643F4 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		84505B1C1FEED546006643F4 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		84505B421FF43EF8006643F4 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				84505B181FEDFF4C006643F4 /* PostViewController.swift */,
 				84505B1C1FEED546006643F4 /* MessagesTableViewCell.swift */,
 				84505AF51FE9F8B5006643F4 /* Main.storyboard */,
+				84505B421FF43EF8006643F4 /* CommentsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				84505B151FEB042D006643F4 /* LoginViewController.swift in Sources */,
 				84505B131FEB0260006643F4 /* RegisterViewController.swift in Sources */,
 				84505B171FEDA307006643F4 /* Helper.swift in Sources */,
+				84505B431FF43EF8006643F4 /* CommentsViewController.swift in Sources */,
 				84505AF41FE9F8B5006643F4 /* ViewController.swift in Sources */,
 				84505B1D1FEED546006643F4 /* MessagesTableViewCell.swift in Sources */,
 				84505AF21FE9F8B5006643F4 /* AppDelegate.swift in Sources */,
