@@ -49,6 +49,10 @@ class CommentsViewController: UIViewController {
     }
     
     @IBAction func flag(_ sender: Any) {
+        if let selectedObj = selectedObject {
+            selectedObj.incrementKey("flagged")
+            selectedObj.saveInBackground()
+        }
     }
     
 }

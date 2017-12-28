@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         title = PFUser.current()?.username
+    }
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getMessages()
     }
     
